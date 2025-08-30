@@ -41,7 +41,7 @@ For more detailed information, please see the full [documentation](https://cloud
 
 ## Contributing
 
-We welcome contributions! Please see our [contributing guidelines](./CONTRIBUTING.md) for more information.
+We welcome contributions! Please see our [contributing guidelines](./CODE_OF_CONDUCT.md) for more information.
 
 ## License
 
