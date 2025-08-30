@@ -1,0 +1,57 @@
+---
+title: Project Structure
+description: The directory structure of the project.
+---
+
+# Project Structure
+
+The project follows a standard Maven project structure, organized into logical packages for clarity and maintainability.
+
+## Directory Structure
+
+```
+└── puneet-chandna-cloudsim-ho-research-v2/
+    ├── LICENSE
+    ├── pom.xml
+    ├── run-experiment.ps1
+    ├── run-experiment.sh
+    ├── run-quick-test.ps1
+    ├── run-quick-test.sh
+    ├── run-simulation.ps1
+    ├── run-simulation.sh
+    ├── results/
+    └── src/
+        ├── main/
+        │   ├── java/
+        │   │   └── org/
+        │   │       └── puneet/
+        │   │           └── cloudsimplus/
+        │   │               └── hiippo/
+        │   │                   ├── App.java
+        │   │                   ├── algorithm/
+        │   │                   ├── baseline/
+        │   │                   ├── exceptions/
+        │   │                   ├── policy/
+        │   │                   ├── simulation/
+        │   │                   ├── statistical/
+        │   │                   └── util/
+        │   └── resources/
+        └── test/
+            └── java/
+                └── org/
+                    └── puneet/
+                        └── cloudsimplus/
+                            └── hiippo/
+                                ├── AppTest.java
+                                └── unit/
+```
+
+## Key Directories
+
+| Directory | Description |
+| :--- | :--- |
+| `src/main/java` | Contains the core Java source code for the simulation framework. |
+| `src/main/resources` | Includes configuration files like `config.properties` and `logback.xml`. |
+| `src/test/java` | Contains all the unit and integration tests for the project. |
+| `results/` | The default directory for storing all the simulation results and logs. |
+| `target/` | Maven's build directory, containing the compiled code and packaged JAR files. |

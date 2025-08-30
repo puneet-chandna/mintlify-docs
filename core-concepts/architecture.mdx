@@ -1,0 +1,39 @@
+---
+title: Architecture
+description: High-level overview of the project's architecture.
+---
+
+# Architecture
+
+This page provides a high-level overview of the architecture of the CloudSim-HO-Research-V2 project.
+
+## The Hippopotamus Optimization (HO) Algorithm
+
+The core of this research framework is the Hippopotamus Optimization (HO) algorithm, a nature-inspired metaheuristic algorithm that models the social behavior of hippos to solve complex optimization problems.
+
+### Core Concepts
+
+- **Population:** A set of "hippos," where each hippo represents a potential solution to the VM placement problem.
+- **Fitness:** A multi-objective function that evaluates the quality of each solution based on resource utilization, power consumption, and SLA violations.
+- **Position Update:** The process by which hippos move in the search space, influenced by the "leader" (the best solution) and "prey" (random solutions).
+
+### Implementation Details
+
+The HO algorithm is implemented in the `org.puneet.cloudsimplus.hiippo.algorithm` package, with the following key classes:
+
+- **`HippopotamusOptimization.java`:** The main class that orchestrates the optimization process.
+- **`Hippopotamus.java`:** Represents a single solution (a hippo) in the population.
+- **`HippopotamusParameters.java`:** Encapsulates all the tunable parameters for the HO algorithm.
+
+## Simulation Workflow
+
+The simulation is coordinated by the `ExperimentCoordinator.java` class, which manages the entire experimental workflow.
+
+### The Workflow Steps
+
+1.  **Configuration:** The coordinator loads the experimental setup from `config.properties`, including the scenarios and algorithms to be tested.
+2.  **Scenario Generation:** For each scenario, the `TestScenarios.java` class creates a set of VMs and hosts with specific configurations.
+3.  **Experiment Execution:** The `ExperimentRunner.java` class runs the simulation for each algorithm and scenario, for a specified number of replications.
+4.  **Metrics Collection:** During the simulation, the `MetricsCollector.java` class gathers all the relevant performance data.
+5.  **Results Writing:** The `CSVResultsWriter.java` class writes all the collected data to CSV files in the `results/` directory.
+6.  **Statistical Analysis:** Finally, the `ComparisonAnalyzer.java` class performs statistical tests to compare the performance of the different algorithms.

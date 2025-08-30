@@ -1,0 +1,17 @@
+---
+title: App.java
+description: The main entry point for the research framework.
+---
+
+# App.java
+
+The `App.java` class serves as the main entry point for the entire research framework. Its primary function is to initialize and orchestrate the complete experimental suite.
+
+## Step-by-step Breakdown
+
+1.  **Initializes Framework Components:** It sets up essential components like the `RunManager` for managing experiment directories and the `CSVResultsWriter` for saving results.
+2.  **Creates an Experiment Coordinator:** It instantiates the `ExperimentCoordinator`, which is responsible for managing the overall workflow of the experiments.
+3.  **Configures and Runs Experiments:** It calls the `configureExperiments()` and `runCompleteExperiment()` methods on the coordinator to execute the full suite of simulations as defined in the configuration files.
+4.  **Handles Errors:** It includes top-level error handling to catch any critical exceptions that might occur during the execution of the experiments.
+
+In short, `App.java` is the "master controller" that kicks off the entire simulation and analysis process.
