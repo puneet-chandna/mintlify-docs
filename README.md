@@ -37,7 +37,7 @@ To run the default experiment, which includes the Micro, Small, and Medium scena
 
 ## Documentation
 
-For more detailed information, please see the full [documentation](https://puneet-chandna.github.io/cloudsim-ho-research-V2-docs/).
+For more detailed information, please see the full [documentation](https://cloudsim-ho-project.puneetchandna.com/).
 
 ## Contributing
 
