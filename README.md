@@ -1,44 +1,52 @@
-# Mintlify Starter Kit
+# CloudSim-HO-Research-V2
 
-Use the starter kit to get your docs deployed and ready to customize.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+A research framework for evaluating the Hippopotamus Optimization (HO) algorithm for Virtual Machine (VM) placement in cloud data centers.
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## Key Features
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+- A comprehensive implementation of the Hippopotamus Optimization (HO) algorithm.
+- A robust platform for comparing the HO algorithm against baseline allocation strategies like FirstFit, BestFit, and Genetic Algorithm (GA).
+- In-depth parameter sensitivity analysis and scalability testing.
+- Detailed performance metrics, including resource utilization, SLA violations, and power consumption.
 
-## Development
+## Getting Started
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+### Prerequisites
 
+- Java 21
+- Maven 3.9+
+
+### Installation
+
+```bash
+git clone https://github.com/puneet-chandna/cloudsim-ho-research-V2.git
+cd cloudsim-ho-research-V2
+mvn clean install
 ```
-npm i -g mint
+
+## Usage
+
+To run the default experiment, which includes the Micro, Small, and Medium scenarios, run the following command:
+
+```bash
+./run-experiment.sh
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+## Documentation
 
-```
-mint dev
-```
+For more detailed information, please see the full [documentation](https://puneet-chandna.github.io/cloudsim-ho-research-V2-docs/).
 
-View your local preview at `http://localhost:3000`.
+## Contributing
 
-## Publishing changes
+We welcome contributions! Please see our [contributing guidelines](./CONTRIBUTING.md) for more information.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## License
 
-## Need help?
+This project is licensed under the [MIT License](./LICENSE).
 
-### Troubleshooting
+## Acknowledgments
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
-- [Mintlify community](https://mintlify.com/community)
+This project is built on top of [CloudSim Plus](http://cloudsimplus.org/), a modern and full-featured framework for modeling and simulating cloud computing environments.
