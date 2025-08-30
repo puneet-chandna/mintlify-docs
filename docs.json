@@ -3,9 +3,9 @@
   "name": "CloudSim-HO-Research-V2",
   "theme": "willow",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#041345",  
+    "light": "#57b6fa",    
+    "dark": "#041f8a"    
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -94,7 +94,9 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/puneet-chandna/cloudsim-ho-research-V2"
+      "github": "https://github.com/puneet-chandna/cloudsim-ho-research-V2",
+      "linkedin": "https://www.linkedin.com/in/puneet-chandna/",
+      "instagram": "https://www.instagram.com/puneet_chandna_"
     }
   }
 }
