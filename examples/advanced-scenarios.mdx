@@ -1,8 +1,40 @@
 ---
 title: Advanced Scenarios
-description: More complex examples.
+description: How to create and customize simulation scenarios.
 ---
 
+## Modifying Existing Scenarios
 
+You can easily modify the number of VMs and hosts for the existing scenarios by changing the values in the `config.properties` file.
 
-This page provides more complex examples of simulation scenarios in the CloudSim-HO-Research-V2 project.
+For example, to change the number of VMs and hosts for the "Medium" scenario, you would modify the following properties:
+
+```properties
+scenario.medium.vms=150
+scenario.medium.hosts=25
+```
+
+## Enabling Disabled Scenarios
+
+The `Large` and `XLarge` scenarios are disabled by default for stability. You can enable them by uncommenting them in the `config.properties` file and adding them to the `scenarios.enabled` list.
+
+```properties
+# scenario.large.vms=200
+# scenario.large.hosts=40
+# scenario.large.complexity=4
+# scenario.xlarge.vms=400
+# scenario.xlarge.hosts=100
+# scenario.xlarge.complexity=5
+
+scenarios.enabled=Micro,Small,Medium,Large,XLarge
+```
+
+## Creating Custom Scenarios with `ScenarioGenerator.java`
+
+The framework includes a powerful `ScenarioGenerator.java` class that allows you to create highly customized and complex scenarios. This is ideal for researchers who need to test algorithms under specific conditions.
+
+The `ScenarioGenerator` supports customization across three key dimensions:
+
+- **`ScenarioType`:** Defines the overall characteristics of the environment (e.g., `HOMOGENEOUS`, `HETEROGENEOUS`, `OVERSUBSCRIBED`).
+- **`WorkloadPattern`:** Simulates different application behaviors (e.g., `CONSTANT`, `BURSTY`, `PERIODIC`).
+- **`VmSizeDistribution`:** Controls the mix of VM sizes (e.g., `UNIFORM`, `NORMAL`, `BIMODAL`).

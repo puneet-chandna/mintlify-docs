@@ -1,8 +1,24 @@
 ---
 title: Basic Scenarios
-description: Examples of how to run and analyze basic simulation scenarios.
+description: How to run the built-in simulation scenarios.
 ---
 
+The framework defines a set of standard scenarios based on scale:
 
+- **Micro:** 10 VMs, 3 Hosts
+- **Small:** 50 VMs, 10 Hosts
+- **Medium:** 100 VMs, 20 Hosts
+- **Large:** (Disabled by default for stability)
+- **XLarge:** (Disabled by default for stability)
 
-This page provides examples of how to run and analyze basic simulation scenarios in the CloudSim-HO-Research-V2 project.
+By default, the Micro, Small, and Medium scenarios are enabled.
+
+## Running Scenarios
+
+You can specify which scenarios to run in the `config.properties` file. The `scenarios.enabled` property accepts a comma-separated list of scenario names.
+
+For example, to run only the Micro and Small scenarios, you would set the property as follows:
+
+```properties
+scenarios.enabled=Micro,Small
+```

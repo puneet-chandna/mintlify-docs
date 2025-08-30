@@ -3,6 +3,55 @@ title: Building from Source
 description: Instructions on how to build the project from source.
 ---
 
+## Introduction
 
+This guide provides detailed instructions on how to build the CloudSim-HO-Research-V2 project from source.
 
-This page provides instructions on how to build the CloudSim-HO-Research-V2 project from source.
+## Prerequisites
+
+Before you begin, make sure you have the following software installed on your system:
+
+- **Java Development Kit (JDK) 21:** You can download it from the [Oracle website](https://www.oracle.com/java/technologies/javase-jdk21-downloads.html). To verify your installation, run `java -version`.
+- **Apache Maven 3.9+:** You can download it from the [Maven website](https://maven.apache.org/download.cgi). To verify your installation, run `mvn -version`.
+- **Git:** You can download it from the [Git website](https://git-scm.com/downloads). To verify your installation, run `git --version`.
+
+## Cloning the Repository
+
+To get started, clone the repository from GitHub:
+
+```bash
+git clone https://github.com/puneet-chandna/cloudsim-ho-research-V2.git
+cd cloudsim-ho-research-V2
+```
+
+## Building the Project
+
+### Standard Build
+
+To perform a standard build, which includes compiling the code, running the tests, and packaging the project into a JAR file, run the following command:
+
+```bash
+mvn clean install
+```
+
+### Skipping Tests
+
+If you want to speed up the build process, you can skip the tests by using the `-DskipTests` flag:
+
+```bash
+mvn clean install -DskipTests
+```
+
+### Building the Executable JAR
+
+The project is configured to create an executable JAR file with all the dependencies included. This JAR file will be located in the `target` directory and will be named `cloudsim-ho-research-v2-1.0-SNAPSHOT.jar`.
+
+## Troubleshooting
+
+### Build Failures
+
+If the build fails, please make sure you have the correct versions of Java and Maven installed. You can also try cleaning the project by running `mvn clean` and then building it again.
+
+### Missing Dependencies
+
+If you get an error about missing dependencies, please make sure you have a working internet connection and that you are not behind a firewall that is blocking access to the Maven central repository.

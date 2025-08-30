@@ -3,12 +3,46 @@ title: algorithm_parameters.properties
 description: The configuration file for the algorithms.
 ---
 
+This file contains the specific parameters for the Hippopotamus Optimization (HO) algorithm and the baseline algorithms.
 
+## Hippopotamus Optimization (HO)
 
-This file contains the specific parameters for the HO and baseline algorithms:
+The HO algorithm has a rich set of parameters that allow you to fine-tune its behavior.
 
-| Property | Description |
-| :--- | :--- |
-| `ho.population.size` | The number of hippos (solutions) in the population. |
-| `ho.max.iterations` | The maximum number of generations the algorithm will run for. |
-| `ga.mutation.rate` | The mutation rate for the Genetic Algorithm. |
+### Core Parameters
+
+- `ho.population.size`: The number of "hippos" (solutions) in the population.
+- `ho.max.iterations`: The maximum number of iterations the algorithm will run for.
+
+### Movement Strategy
+
+These parameters control how the hippos move in the search space.
+
+- `ho.exploration.rate.initial` and `ho.exploration.rate.final`: Control the balance between exploration and exploitation.
+- `ho.levy.flight.enabled`: Enables Levy flight, a random walk strategy that can help escape local optima.
+
+### Multi-objective Optimization
+
+These parameters control how the algorithm handles multiple objectives (e.g., resource utilization, power consumption).
+
+- `ho.pareto.enabled`: Enables Pareto optimization, a technique for finding a set of optimal solutions.
+- `ho.penalty.sla.violation` and `ho.penalty.allocation.failure`: Penalties for violating service level agreements or failing to allocate a VM.
+
+## Baseline Algorithms
+
+These are the parameters for the baseline algorithms that are used for comparison.
+
+### First Fit
+
+- `firstfit.sorting.enabled`: Enables sorting of hosts before allocation.
+
+### Best Fit
+
+- `bestfit.waste.calculation`: The method used to calculate the waste when placing a VM.
+- `bestfit.cpu.weight` and `bestfit.ram.weight`: The weights for CPU and RAM in the waste calculation.
+
+### Genetic Algorithm (GA)
+
+- `ga.population.size`: The size of the population in the GA.
+- `ga.max.generations`: The maximum number of generations for the GA.
+- `ga.mutation.rate` and `ga.crossover.rate`: The rates for mutation and crossover, which are key genetic operators.

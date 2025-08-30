@@ -3,12 +3,44 @@ title: config.properties
 description: The main configuration file for the project.
 ---
 
+This file controls the overall experimental setup. The properties are organized into logical groups.
 
+### Experiment Settings
 
-This file controls the overall experimental setup:
+These properties control the overall behavior of the experiment.
 
-| Property | Description |
-| :--- | :--- |
-| `experiment.replications` | The number of times each experiment is repeated for statistical validity. |
-| `scenarios.enabled` | A comma-separated list of scenarios to run (e.g., Micro, Small, Medium). |
-| `memory.max.heap.gb` | The maximum heap size for the Java Virtual Machine (JVM). |
+- `experiment.replications`: Number of times to repeat each experiment for statistical significance.
+- `experiment.confidence.level`: Confidence level for statistical analysis (e.g., 0.95 for 95%).
+- `experiment.significance.level`: Significance level for statistical tests.
+- `experiment.random.seed`: A seed for the random number generator to ensure reproducibility.
+
+### Memory Management
+
+These settings control how the framework manages memory, which is crucial for large-scale simulations.
+
+- `memory.max.heap.gb`: Maximum heap size for the JVM.
+- `memory.batch.processing.enabled`: Enables processing VMs in batches to conserve memory.
+
+### Scenario Definitions
+
+These properties define the scale of the simulation scenarios.
+
+- `scenarios.enabled`: A comma-separated list of scenarios to run (e.g., `Micro,Small,Medium`).
+- `scenario.*.vms`: The number of Virtual Machines for a given scenario (e.g., `scenario.micro.vms`).
+- `scenario.*.hosts`: The number of hosts for a given scenario (e.g., `scenario.micro.hosts`).
+
+> **Note:** The `Large` and `XLarge` scenarios are disabled by default for stability but can be enabled by uncommenting them and adding them to the `scenarios.enabled` list.
+
+### Output Configuration
+
+These settings control how the simulation results are saved.
+
+- `output.base.directory`: The directory where the results will be saved.
+- `output.csv.delimiter`: The delimiter to use for CSV files.
+
+### Host and VM Configuration
+
+These properties define the characteristics of the simulated hardware.
+
+- `host.*`: Defines the properties of the host machines (e.g., `host.mips`, `host.ram`).
+- `vm.*`: Defines the properties of the virtual machines (e.g., `vm.mips.min`, `vm.ram.max`).
