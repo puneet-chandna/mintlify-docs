@@ -3,9 +3,9 @@
   "name": "CloudSim-HO-Research-V2",
   "theme": "willow",
   "colors": {
-    "primary": "#041345",  
+    "primary": "#021e9e",  
     "light": "#57b6fa",    
-    "dark": "#041f8a"    
+    "dark": "#021e9e"    
   },
   "favicon": "/favicon.svg",
   "navigation": {
